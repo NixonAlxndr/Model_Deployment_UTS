@@ -16,22 +16,21 @@ st.sidebar.header('Input Data Pelanggan')
 
 no_of_adults = st.sidebar.number_input('Jumlah Orang Dewasa', min_value=1, max_value=10, value=1)
 no_of_children = st.sidebar.number_input('Jumlah Anak', min_value=0, max_value=10, value=0)
-no_of_weekend_nights = st.sidebar.number_input('Jumlah Malam Akhir Pekan', min_value=0, max_value=7, value=1)
-no_of_week_nights = st.sidebar.number_input('Jumlah Malam Hari Kerja', min_value=0, max_value=7, value=3)
+no_of_weekend_nights = st.sidebar.number_input('Jumlah Weekend', min_value=0, max_value=7, value=1)
+no_of_week_nights = st.sidebar.number_input('Jumlah Weekday', min_value=0, max_value=7, value=3)
 required_car_parking_space = st.sidebar.selectbox('Butuh Tempat Parkir?', ['Ya', 'Tidak'])
-lead_time = st.sidebar.number_input('Lead Time (Hari)', min_value=0, max_value=365, value=30)
+lead_time = st.sidebar.number_input('Total hari menginap', min_value=0, max_value=365, value=30)
 repeated_guest = st.sidebar.selectbox('Tamu Berulang?', ['Ya', 'Tidak'])
 type_of_meal_plan = st.sidebar.selectbox('Paket Makanan', ['Meal Plan 1', 'Meal Plan 2', 'Meal Plan 3', 'Not Selected'])
 room_type_reserved = st.sidebar.selectbox('Tipe Kamar', ['Room_Type 1', 'Room_Type 2', 'Room_Type 3', 'Room_Type 4', 'Room_Type 5', 'Room_Type 6', 'Room_Type 7'])
-arrival_year = st.sidebar.selectbox('Tahun Kedatangan', [2017]) 
-arrival_month = st.sidebar.selectbox('Bulan Kedatangan', list(range(1, 13)))
+arrival_year = st.sidebar.number_input('Tahun Kedatangan', value=2025) 
+arrival_month = st.sidebar.selectbox('Bulan Kedatangan', list(range(1, 12)))
 arrival_date = st.sidebar.selectbox('Tanggal Kedatangan', list(range(1, 32)))
 market_segment_type = st.sidebar.selectbox('Segment Pasar', ['Online', 'Offline', 'Corporate', 'Complementary', 'Aviation'])
 no_of_previous_cancellations = st.sidebar.number_input('Jumlah Pembatalan Sebelumnya', min_value=0, max_value=20, value=0)
 no_of_previous_bookings_not_canceled = st.sidebar.number_input('Jumlah Booking Tidak Dibatalkan Sebelumnya', min_value=0, max_value=20, value=0)
 avg_price_per_room = st.sidebar.number_input('Harga Rata-Rata per Kamar (€)', min_value=0.0, value=100.0)
 no_of_special_requests = st.sidebar.number_input('Jumlah Permintaan Khusus', min_value=0, max_value=5, value=0)
-
 
 required_car_parking_space = 1 if required_car_parking_space == 'Ya' else 0
 repeated_guest = 1 if repeated_guest == 'Ya' else 0
