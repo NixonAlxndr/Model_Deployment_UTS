@@ -1,1 +1,1 @@
-Link StreamLit: [https://modeldeploymentuts-5xqgbfvyzjzs6wpz6x4odi.streamlit.app/](https://modeldeploymentuts-5xqgbfvyzjzs6wpz6x4odi.streamlit.app/)
+Link StreamLit: https://modeldeploymentuts-2lcxre9xwbtannqjhs8scf.streamlit.app/
