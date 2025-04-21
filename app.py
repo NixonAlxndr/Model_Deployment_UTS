@@ -67,10 +67,6 @@ with open('market_segment_mapping.pkl', 'rb') as f:
     market_segment_mapping = pickle.load(f)
 input_df['market_segment_type'] = input_df['market_segment_type'].map(market_segment_mapping)
 
-with open('booking_status_mapping.pkl', 'rb') as f:
-    booking_status_mapping = pickle.load(f)
-input_df['booking_status'] = input_df['booking_status'].map(booking_status_mapping)
-
 if st.sidebar.button('Prediksi'):
     prediction = model.predict(input_df)[0]
     status = 'Dibatalkan' if prediction == 1 else 'Tidak Dibatalkan'
